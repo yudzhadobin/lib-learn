@@ -29,7 +29,7 @@ dockerCompose {
     // removeContainers = false
     // removeImages = "None" // Other accepted values are: "All" and "Local"
     // removeOrphans = false // Removes containers for services not defined in the Compose file
-    // forceRecreate = true // pass '--force-recreate' when calling 'docker-compose up'
+    forceRecreate = true // pass '--force-recreate' when calling 'docker-compose up'
     // removeVolumes = false
     // waitForTcpPorts = false // turns off the waiting for exposed TCP ports opening
     // projectName = 'my-project' // allow to set custom docker-compose project name (defaults to directory name)

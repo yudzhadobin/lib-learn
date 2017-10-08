@@ -7,10 +7,13 @@ services:
         restart: always
         environment:
             POSTGRES_USER: yura
-            POSTGRES_PASSWORD: example
+            POSTGRES_PASSWORD: 1
             POSTGRES_DB: postgres
         volumes:
-            - /Users/yuriy/IdeaProjects/lib-learn/src/main/resources/docker-entrypoint-initdb.d/init.sql
+           - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+
+
 
     adminer:
         image: adminer
