@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+
+    db:
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_USER: yura
+            POSTGRES_PASSWORD: example
+            POSTGRES_DB: postgres
+        volumes:
+            - /Users/yuriy/IdeaProjects/lib-learn/src/main/resources/docker-entrypoint-initdb.d/init.sql
+
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+            - 8080:8080
